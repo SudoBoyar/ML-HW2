@@ -1,15 +1,14 @@
 build: Dockerfile
-	docker build -t alex-klein-mlhw2 .
+	docker build -t mlhw2 .
 
 run: build
-#	docker run --rm -it -v `pwd`:/home/jovyan/work alex-klein-mlhw2
-	docker run -d --rm --name akmlhw2 -p 8888:8888 -v `pwd`:/home/jovyan/work alex-klein-mlhw2 start-notebook.sh --NotebookApp.token=''
+	docker run -d --rm --name mlhw2c -p 8888:8888 -v `pwd`:/home/jovyan/work mlhw2 start-notebook.sh --NotebookApp.token=''
 
 stop:
-	docker stop akmlhw2
+	docker stop mlhw2c
 
 terminal:
-	docker run --rm -it -v `pwd`:/home/jovyan/work alex-klein-mlhw2 /bin/bash
+	docker run --rm -it -v `pwd`:/home/jovyan/work mlhw2 /bin/bash
 
 clean:
-	docker rmi alex-klein-mlhw2
+	docker rmi mlhw2
