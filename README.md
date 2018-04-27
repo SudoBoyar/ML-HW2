@@ -1,4 +1,7 @@
 # ML-HW2
+Batch gradient descent, cross-validation, and logistic regression, plust
+min-max scaling and standardization.
+
 Written in Python
 
 Available as pa2.ipynb
